@@ -10,7 +10,7 @@ const formatTime = (time) => (time < 10 ? `0${time}` : time);
 const countdown = () => {
     const birthDayDate = new Date(birthDay);
     const currentDate = new Date();
-}
+
 
 const totalSeconds = (birthDay - currentDate) / 1000;
 
@@ -18,3 +18,12 @@ const days = Math.floor(totalSeconds / 3600 / 24);
 const hours = Math.floor(totalSeconds / 3600) % 24;
 const mins = Math.floor(totalSeconds / 60) % 60;
 const seconds = Math.floor(totalSeconds) % 60;
+
+remDays.innerHTML = days;
+remHours.innerHTML =formatTime(hours);
+remMinutes.innerHTML =formatTime(mins);
+remSeconds.innerHTML =formatTime(seconds);
+
+}
+
+countdown()
